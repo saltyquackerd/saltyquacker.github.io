@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgb(250, 225, 215);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Pixelify+Sans:wght@400..700&display=swap");
+
+.title {
+  font-family: "Pixelify Sans";
+  text-align: center;
+  font-weight: 600;
+  color: rgb(232, 111, 111);
+  text-shadow: 4px 4px rgb(250, 214, 214);
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  margin-bottom: 100px;
+  position: fixed; /* Stay in place */
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center properly */
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(254, 182, 188);
+  }
+}
+
+.audiobutton {
+  font-family: "Pixelify Sans";
+  color: rgb(235, 96, 96);
+  position: fixed; /* Stay in place */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center properly */
+  width: 100px;
+}
+.envelope-container {
+  position: fixed; /* Stay in place */
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center properly */
+  width: 500px; /* Adjust size */
+  height: 450px; /* Adjust size */
+  background-image: url("envelope.gif"); /* Background letter */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  padding: 30px;
+  image-rendering: pixelated;
+}
+
+.maxy {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 20vh; /* Make it full screen height */
+}
+
+.maxygif {
+  width: 300px; /* Adjust size */
+  height: auto; /* Maintain aspect ratio */
+  image-rendering: pixelated;
+}
+
+.buttongroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+}
+
+.buttongroup button {
+  background: none;
+  width: 120px;
+  border: none;
+  padding: 0;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttongroup button img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+#unclickable {
+  position: absolute; /* Allows movement */
+  cursor: default;
+  cursor: default;
+  transition: left 0.01s ease-in-out, top 0.01s ease-in-out; /* Smooth movement */
+  z-index: 999;
+}
+
+.yesgif {
+  background-color: transparent;
+  width: 100px; /* Adjust size */
+  height: auto; /* Maintain aspect ratio */
+  image-rendering: pixelated;
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.nogif {
+  background-color: transparent;
+  width: 100px; /* Adjust size */
+  height: auto; /* Maintain aspect ratio */
+  image-rendering: pixelated;
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-container {
+  position: fixed; /* Stay in place */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center properly */
+  width: 500px; /* Adjust size */
+  height: 450px; /* Adjust size */
+  background-image: url("envelope_opened (1).gif"); /* Background letter */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Ensures no margins around the container */
+  image-rendering: pixelated;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 50vh; /* Example full-screen height */
+}
+
+.flower {
+  width: 10px;
+  height: auto;
+}
+
+.message {
+  font-family: "Pixelify Sans";
+  text-align: center;
+  font-weight: 600;
+  color: rgb(232, 111, 111);
+  text-shadow: 4px 4px rgb(250, 214, 214);
+}
+
+.submessage {
+  font-family: "Pixelify Sans";
+  text-align: center;
+  font-weight: 600;
+  color: rgb(46, 46, 46);
+  text-shadow: 1px 1px rgb(88, 88, 88);
+}
