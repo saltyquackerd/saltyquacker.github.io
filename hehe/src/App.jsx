@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
@@ -67,11 +65,11 @@ function App() {
           <h1 className="title">Will You Be My Valentine?</h1>
           <div className="envelope-container">
             <div className="maxy">
-              <img className="maxygif" src="src\maxy (1).gif"></img>
+              <img className="maxygif" src="/maxy.gif" alt="Maxy Animation" />
             </div>
             <div className="buttongroup">
               <button onClick={() => setOpen(true)}>
-                <img className="yesgif" src="src\yes.gif"></img>
+                <img className="yesgif" src="/yes.gif" alt="Yes Animation" />
               </button>
             </div>
             <div className="buttongroup">
@@ -80,12 +78,13 @@ function App() {
                 onClick={() => setNoIsOpen(true)}
                 onMouseEnter={moveButton}
               >
-                <img className="nogif" src="src\no.gif"></img>
+                <img className="nogif" src="/no.gif" alt="No Animation" />
               </button>
             </div>
           </div>
         </div>
       )}
+
       <Popup
         open={open}
         onClose={() => {
